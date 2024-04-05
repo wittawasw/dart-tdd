@@ -2,26 +2,33 @@ import 'package:dart_tdd/roman_number.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('romanToInt', () {
+  group('toInt', () {
+    test('successfully called romanToInt', () {
+      RomanNumber rm =  RomanNumber(input: 'I');
+      expect(rm.toInt(), 1);
+    });
+  });
+
+  group('static romanToInt', () {
     test('simple', () {
-      expect(romanToInt('I'), 1);
-      expect(romanToInt('III'), 3);
-      expect(romanToInt('V'), 5);
-      expect(romanToInt('X'), 10);
+      expect(RomanNumber.romanToInt('I'), 1);
+      expect(RomanNumber.romanToInt('III'), 3);
+      expect(RomanNumber.romanToInt('V'), 5);
+      expect(RomanNumber.romanToInt('X'), 10);
     });
 
     test('complex', () {
-      expect(romanToInt('IV'), 4);
-      expect(romanToInt('VI'), 6);
-      expect(romanToInt('IX'), 9);
-      expect(romanToInt('XII'), 12);
+      expect(RomanNumber.romanToInt('IV'), 4);
+      expect(RomanNumber.romanToInt('VI'), 6);
+      expect(RomanNumber.romanToInt('IX'), 9);
+      expect(RomanNumber.romanToInt('XII'), 12);
     });
 
     test('composite', () {
-      expect(romanToInt('XIV'), 14);
-      expect(romanToInt('XIX'), 19);
-      expect(romanToInt('XXII'), 22);
-      expect(romanToInt('XXIV'), 24);
+      expect(RomanNumber.romanToInt('XIV'), 14);
+      expect(RomanNumber.romanToInt('XIX'), 19);
+      expect(RomanNumber.romanToInt('XXII'), 22);
+      expect(RomanNumber.romanToInt('XXIV'), 24);
     });
   });
 }
