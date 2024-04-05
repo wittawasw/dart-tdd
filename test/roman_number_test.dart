@@ -17,6 +17,8 @@ void main() {
       expect(await RomanNumber.romanToInt('III'), 3);
       expect(await RomanNumber.romanToInt('V'), 5);
       expect(await RomanNumber.romanToInt('X'), 10);
+      expect(await RomanNumber.romanToInt('C'), 100);
+      expect(await RomanNumber.romanToInt('CC'), 200);
     });
 
     test('complex', () async {

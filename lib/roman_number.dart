@@ -12,7 +12,9 @@ class RomanNumber {
   static final Map<String, int> romanNumbers = {
     'I': 1,
     'V': 5,
-    'X': 10
+    'X': 10,
+    'L': 50,
+    'C': 100
   };
 
   static Future<int> romanToInt(String numberString) async {
