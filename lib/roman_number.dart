@@ -1,9 +1,11 @@
+import 'dart:async';
+
 class RomanNumber {
   final String input;
 
   RomanNumber({required this.input});
 
-  int toInt() {
+  Future<int> toInt() {
     return romanToInt(this.input);
   }
 
@@ -13,7 +15,7 @@ class RomanNumber {
     'X': 10
   };
 
-  static int romanToInt(String numberString) {
+  static Future<int> romanToInt(String numberString) async {
     int result = 0;
     int prev = 0;
 
