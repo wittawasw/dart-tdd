@@ -10,4 +10,13 @@ void main() {
     expect(romanToInt('IX'), 9);
     expect(romanToInt('X'), 10);
   });
+
+  test('intToRoman', () {
+    expect(intToRoman(1), 'I');
+    expect(intToRoman(3), 'III');
+    expect(intToRoman(4), 'V');
+    expect(intToRoman(5), 'IV');
+    expect(intToRoman(9), 'IX');
+    expect(intToRoman(10), 'X');
+  });
 }

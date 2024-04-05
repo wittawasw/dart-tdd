@@ -23,3 +23,7 @@ int romanToInt(String input) {
 
   return result;
 }
+
+String intToRoman(int input) {
+  return 'I';
+}
