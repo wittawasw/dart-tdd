@@ -26,6 +26,7 @@ void main() {
       expect(await RomanNumber.romanToInt('VI'), 6);
       expect(await RomanNumber.romanToInt('IX'), 9);
       expect(await RomanNumber.romanToInt('XII'), 12);
+      expect(await RomanNumber.romanToInt('CII'), 102);
     });
 
     test('composite', () async {
@@ -33,6 +34,8 @@ void main() {
       expect(await RomanNumber.romanToInt('XIX'), 19);
       expect(await RomanNumber.romanToInt('XXII'), 22);
       expect(await RomanNumber.romanToInt('XXIV'), 24);
+      expect(await RomanNumber.romanToInt('CXXXIX'), 139);
+      expect(await RomanNumber.romanToInt('CCLXVIII'), 268);
     });
   });
 }
